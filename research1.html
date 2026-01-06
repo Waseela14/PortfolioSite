@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="researchInterest.css">
+  <link rel="stylesheet" href="publication.css">
+<meta charset="UTF-8">
+<title>Research Areas</title>
+
+<style>
+
+</style>
+</head>
+
+<body>
+
+  <!-- RESEARCH INTEREST -->
+<section class="research-section">
+  <div class="section-title">RESEARCH AREAS</div>
+
+  <div class="card-grid">
+
+    <div class="card red">
+      <h2>AI for Science </h2>
+      <div class="learn-more">Learn more →</div>
+      <div class="more-text">
+        Applying machine learning methods to scientific domains such as physics-informed modeling and data-driven scientific discovery. I am interested in learning-based approaches for modeling complex systems and supporting scientific analysis.
+      </div>
+    </div>
+
+    <div class="card gray">
+      <h2>Large Language Models </h2>
+      <div class="learn-more">Learn more →</div>
+      <div class="more-text">
+        Studying the generalization, evaluation, and reasoning capabilities of large language models, including multimodal reasoning and robustness. I am particularly interested in understanding model behavior and reliability in complex, real-world settings. 
+      </div>
+    </div>
+
+    <div class="card orange">
+      <h2>Machine Learning Acceleration</h2>
+      <div class="learn-more">Learn more →</div>
+      <div class="more-text">
+      Exploring hardware-aware and system-level techniques for accelerating machine learning workloads. This includes model optimization, efficient inference, and the interaction between machine learning algorithms and underlying hardware platforms.
+      </div>
+    </div>
+     <div class="card orange">
+      <h2>Computer Architecture for AI</h2>
+      <div class="learn-more">Learn more →</div>
+      <div class="more-text">
+      Investigating architectural support for modern AI workloads, including heterogeneous computing platforms and resource-efficient design for machine learning applications. I am interested in how architectural choices impact performance, scalability, and efficiency of AI systems.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PUBLICATION SECTION -->
+<section class="publications">
+  
+  
+  <!-- <p>A selection of my peer-reviewed articles and papers.</p> -->
+
+  <div class="section-label"> 
+    <h1>Publications (Under Review)</h1>
+  </div>
+
+  <!-- Card 1 -->
+  <div class="pub-card">
+    <div class="badge">Signal Processing Systems</div>
+
+    <!-- <div class="pub-actions">
+      <div class="action-box">PDF</div>
+      <div class="action-box">CITE</div>
+    </div> -->
+
+    <div class="pub-title">
+      An Efficient and Flexible FPGA-Based Deep Neural Network Accelerator.
+    </div>
+
+    <div class="pub-authors">
+     Designed a modular FPGA-based accelerator for convolutional neural networks,
+      achieving approximately <strong>50%</strong> resource reduction and up to <strong>40x</strong> 
+      efficiency improvement compared to conventional DSP-based designs. The architecture was 
+      scaled to deliver up to 144 GOPS and 480 FPS with low power consumption, enabling efficient 
+      AI deployment on edge devices.
+    </div>
+
+    <!-- <div class="pub-venue">
+      International Symposium on Computer Architecture (ISCA), 2025
+    </div> -->
+  </div>
+
+  <!-- Card 2 -->
+  <div class="pub-card">
+    <div class="badge">Language Resources and Evaluation</div>
+
+    <!-- <div class="pub-actions">
+      <div class="action-box">PDF</div>
+      <div class="action-box">CITE</div>
+    </div> -->
+
+    <div class="pub-title">
+     Advancing Low-Resource Language Speech Synthesis: A VITS-Based Urdu TTS System
+    </div>
+
+    <div class="pub-authors">
+    Developed and fine‑tuned a VITS‑based text‑to‑speech model for Urdu, a low‑resource language, 
+    using a custom dataset; demonstrates significant improvements in synthesis quality for 
+    under‑resourced speech applications.
+    </div>
+
+    <!-- <div class="pub-venue">
+      Design Automation Conference (DAC), 2024
+    </div>
+  </div> -->
+
+</section>
+
+
+<script>
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+  const button = card.querySelector(".learn-more");
+
+  button.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    // Close all cards first
+    cards.forEach(c => c.classList.remove("active"));
+
+    // Open clicked card
+    card.classList.add("active");
+  });
+});
+
+// Click anywhere outside → collapse
+document.addEventListener("click", () => {
+  cards.forEach(c => c.classList.remove("active"));
+});
+</script>
+
+</body>
+</html>
